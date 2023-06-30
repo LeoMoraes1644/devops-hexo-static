@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Defina suas variáveis de ambiente, como a URL do seu repositório
-        REPO_URL = 'https://github.com/LeoMoraes1644/BlogProjeto'
+        REPO_URL = 'https://github.com/LeoMoraes1644/Devops-hexo-static.git'
     }
 
     stages {
