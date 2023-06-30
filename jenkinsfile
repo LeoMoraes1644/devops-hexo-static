@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+    environment {
+        // Defina suas variáveis de ambiente, como a URL do seu repositório
+        REPO_URL = 'https://github.com/LeoMoraes1644/BlogProjeto'
+    }
+
+    stages {
+
+        stage('Setup') {
+            steps {
+                // Configurar o ambiente
+                sh 'npx install'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // Gerar arquivos estáticos com Hexo
+                sh 'npx hexo generate'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                // Implementar com Hexo
+                sh 'npx hexo deploy'
+            }
+        }
+
+    }
+}
