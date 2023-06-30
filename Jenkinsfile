@@ -18,14 +18,14 @@ pipeline {
         stage('Build') {
             steps {
                 // Gerar arquivos estáticos com Hexo
-                bat'hexo generate'
+                bat'npm run build'
             }
         }
 
         stage('Deploy') {
             steps {
                 // Implementar com Hexo
-                bat'hexo deploy'
+                bat'npm rum deploy'
             }
         }
 
