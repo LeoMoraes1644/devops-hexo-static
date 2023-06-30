@@ -11,21 +11,21 @@ pipeline {
         stage('Setup') {
             steps {
                 // Configurar o ambiente
-                bat 'npx install'
+                bat'npm install'
             }
         }
 
         stage('Build') {
             steps {
                 // Gerar arquivos estáticos com Hexo
-                bat 'npx hexo generate'
+                bat'npm hexo generate'
             }
         }
 
         stage('Deploy') {
             steps {
                 // Implementar com Hexo
-                bat 'npx hexo deploy'
+                bat'npm hexo deploy'
             }
         }
 
